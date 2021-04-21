@@ -1,0 +1,28 @@
+{
+  "name": "ZDLog",
+  "version": "1.0.4",
+  "summary": "日志管理和异常信息输出",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://gitlab.izaodao.com/lvhaoxuan/ZDLog",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "lvhaoxuan": "lvhaoxuan@izaodao.com"
+  },
+  "source": {
+    "git": "https://gitlab.izaodao.com/lvhaoxuan/ZDLog.git",
+    "tag": "1.0.4"
+  },
+  "platforms": {
+    "ios": "10.0",
+    "osx": "10.12"
+  },
+  "source_files": "ZDLog/Classes/**/*",
+  "dependencies": {
+    "CocoaLumberjack": [
+
+    ]
+  }
+}

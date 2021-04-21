@@ -1,0 +1,6 @@
+framework module Pods_ZDLog_Tests {
+  umbrella header "Pods-ZDLog_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

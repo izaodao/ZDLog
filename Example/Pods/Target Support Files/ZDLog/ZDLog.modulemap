@@ -1,0 +1,6 @@
+framework module ZDLog {
+  umbrella header "ZDLog-umbrella.h"
+
+  export *
+  module * { export * }
+}

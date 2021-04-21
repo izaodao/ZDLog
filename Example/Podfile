@@ -1,0 +1,14 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'ZDLog_Example' do
+  pod 'ZDLog', :path => '../'
+  pod 'CocoaLumberjack'
+  
+  target 'ZDLog_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
