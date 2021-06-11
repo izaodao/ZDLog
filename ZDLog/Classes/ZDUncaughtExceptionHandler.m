@@ -14,6 +14,10 @@ NSString * const UncaughtExceptionHandlerSignalExceptionName = @"UncaughtExcepti
 NSString * const UncaughtExceptionHandlerSignalKey = @"UncaughtExceptionHandlerSignalKey";
 NSString * const UncaughtExceptionHandlerAddressesKey = @"UncaughtExceptionHandlerAddressesKey";
 
+@interface ZDUncaughtExceptionHandler ()
+
+@end
+
 @implementation ZDUncaughtExceptionHandler
 // 异常的处理方法
 + (void)install {
@@ -130,7 +134,7 @@ void HandleException(NSException *exception) {
     NSString *dateStr = [formatter stringFromDate:[NSDate date]];
     NSString *app_Version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
     NSString *app_BundleVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
-    [app_Version stringByAppendingFormat:@"%@ (%@)", app_Version, app_BundleVersion];
+    NSString *version = [app_Version stringByAppendingFormat:@" (%@)", app_BundleVersion];
     NSProcessInfo *processInfo = [NSProcessInfo processInfo];
     NSString *process = [[processInfo processName] stringByAppendingFormat:@" [%d]", [processInfo processIdentifier]];
     NSString *path = [[processInfo arguments] firstObject];
@@ -139,10 +143,19 @@ void HandleException(NSException *exception) {
     NSString *UUID = [processInfo globallyUniqueString];
     
     //整合崩溃信息
-    NSString *crashString = [NSString stringWithFormat:@"\n[ Uncaught Exception ]\n\nName: %@, \n\nReason: %@\n\nProcess: %@\n\nPath: %@\n\nIdentifier: %@\n\nVersion: %@\n\nDate/Time: %@\n\nOS Version: %@\n\nAnonymous UUID: %@\n\n[ Fe Symbols Start ]\n%@[ Fe Symbols End ]\n\n",  name, reason, process, path, bundleID, app_Version, dateStr, OS_Version, UUID, strSymbols ? strSymbols : exception.userInfo];
+    NSString *crashString = [NSString stringWithFormat:@"\n[ Uncaught Exception ]\n\nName: %@, \n\nReason: %@\n\nProcess: %@\n\nPath: %@\n\nIdentifier: %@\n\nVersion: %@\n\nDate/Time: %@\n\nOS Version: %@\n\nAnonymous UUID: %@\n\n[ Fe Symbols Start ]\n%@[ Fe Symbols End ]\n\n",  name, reason, process, path, bundleID, version, dateStr, OS_Version, UUID, strSymbols ? strSymbols : exception.userInfo];
     
     //向'文件' 和 '控制台' 输出崩溃信息
     DDLogError(@"崩溃信息：%@", crashString);
+    
+    // SIGSEGV 异常直接退出
+    if ([reason containsString:@"SIGSEGV"]) {
+#if DEBUG
+        @throw exception;
+#else
+        exit(0);
+#endif
+    }
 }
 
 @end

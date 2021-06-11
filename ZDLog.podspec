@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ZDLog'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = '日志管理和异常信息输出'
 
   s.description      = <<-DESC
