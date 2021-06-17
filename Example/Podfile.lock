@@ -3,10 +3,10 @@ PODS:
     - CocoaLumberjack/Core (= 3.7.0)
   - CocoaLumberjack/Core (3.7.0)
   - ZDLog (1.0.5):
-    - CocoaLumberjack
+    - CocoaLumberjack (~> 3.7.0)
 
 DEPENDENCIES:
-  - CocoaLumberjack
+  - CocoaLumberjack (~> 3.7.0)
   - ZDLog (from `../`)
 
 SPEC REPOS:
@@ -19,8 +19,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
-  ZDLog: 97d471a11be6a3dd7cfb65690d535df8e6578570
+  ZDLog: 919dc5599203ead0e372e0e357daead66ae477d8
 
-PODFILE CHECKSUM: 8422c80909322c5fbd2af44fb310ba64502e57ec
+PODFILE CHECKSUM: e37028f5fcf286d934785e13086bc5906917b5f3
 
 COCOAPODS: 1.10.1

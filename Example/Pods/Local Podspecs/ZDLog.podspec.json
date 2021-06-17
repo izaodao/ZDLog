@@ -22,7 +22,7 @@
   "source_files": "ZDLog/Classes/**/*",
   "dependencies": {
     "CocoaLumberjack": [
-
+      "~> 3.7.0"
     ]
   }
 }

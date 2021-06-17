@@ -4,7 +4,7 @@ platform :ios, '10.0'
 
 target 'ZDLog_Example' do
   pod 'ZDLog', :path => '../'
-  pod 'CocoaLumberjack'
+  pod 'CocoaLumberjack', '~> 3.7.0'
   
   target 'ZDLog_Tests' do
     inherit! :search_paths
