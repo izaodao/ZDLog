@@ -1,6 +1,6 @@
 {
   "name": "ZDLog",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "summary": "日志管理和异常信息输出",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/izaodao/ZDLog",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/izaodao/ZDLog.git",
-    "tag": "1.0.5"
+    "tag": "1.0.7"
   },
   "platforms": {
     "ios": "10.0",
@@ -22,7 +22,7 @@
   "source_files": "ZDLog/Classes/**/*",
   "dependencies": {
     "CocoaLumberjack": [
-      "~> 3.7.0"
+
     ]
   }
 }

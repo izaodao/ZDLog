@@ -1,9 +1,9 @@
 PODS:
-  - CocoaLumberjack (3.7.0):
-    - CocoaLumberjack/Core (= 3.7.0)
-  - CocoaLumberjack/Core (3.7.0)
-  - ZDLog (1.0.5):
-    - CocoaLumberjack (~> 3.7.0)
+  - CocoaLumberjack (3.7.2):
+    - CocoaLumberjack/Core (= 3.7.2)
+  - CocoaLumberjack/Core (3.7.2)
+  - ZDLog (1.0.7):
+    - CocoaLumberjack
 
 DEPENDENCIES:
   - CocoaLumberjack (~> 3.7.0)
@@ -18,8 +18,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
-  ZDLog: 919dc5599203ead0e372e0e357daead66ae477d8
+  CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
+  ZDLog: f926d73aab25b8a8488eac16d778ad9ac77d2569
 
 PODFILE CHECKSUM: e37028f5fcf286d934785e13086bc5906917b5f3
 

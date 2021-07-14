@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ZDLog'
-  s.version          = '1.0.6'
+  s.version          = '1.0.7'
   s.summary          = '日志管理和异常信息输出'
 
   s.description      = <<-DESC
@@ -16,5 +16,5 @@ TODO: Add long description of the pod here.
   s.osx.deployment_target = '10.12'
 
   s.source_files = 'ZDLog/Classes/**/*'
-  s.dependency 'CocoaLumberjack','~> 3.7.0'
+  s.dependency 'CocoaLumberjack'
 end

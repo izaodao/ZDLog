@@ -45,7 +45,7 @@
         }
         
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"MM-dd HH:mm:ss:SSS"];
+        [formatter setDateFormat:@"HH:mm:ss:SSSZ"];
         [formatter setLocale:[NSLocale currentLocale]];
         NSString *logDateMessage = [formatter stringFromDate:logMessage->_timestamp];
         
